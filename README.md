@@ -86,7 +86,7 @@ pip install -e ".[perception,planner]"     # optional: contact maps, alignment p
 | `dev` | pytest | tests |
 
 - Python 3.11 is the tested version for all extras. The `lerobot` package itself (only for `LeRobotDataset`, see [docs/dataset.md](docs/dataset.md)) needs Python >= 3.12; we used `lerobot==0.6.1` in a separate environment.
-- The planner runs on CPU: JIT warmup about 18 s, then about 40 ms per step on a 32-core CPU. JAX prints "a CUDA-enabled jaxlib is not installed. Falling back to cpu", which is harmless. For a GPU, `pip install "jax[cuda12]==0.8.1"`.
+- The planner runs on CPU: JIT warmup about 18 s, then about 40 ms per step on a 32-core CPU. JAX prints "a CUDA-enabled jaxlib is not installed. Falling back to cpu", which is harmless. A CUDA build (`pip install "jax[cuda12]==0.8.1"`) works but is not faster for this small problem; stay on CPU.
 
 </details>
 

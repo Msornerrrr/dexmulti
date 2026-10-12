@@ -407,9 +407,10 @@ spheres for each object).
   machine after the warmup. For reference, on a 32-core CPU with the default URDF and
   the full collision world: warmup about 16-18 s, step median 30-50 ms (`dec2025` is the
   faster preset); the 95th percentile per trial was usually under 100 ms but reached 250 ms
-  once in 24 trials. A CUDA build of
-  JAX is faster: `pip install "jax[cuda12]==0.8.1"` (matching the pinned version).
-  <!-- TODO(release): confirm the CUDA install line and GPU step times on a GPU machine. -->
+  once in 24 trials. A CUDA build of JAX (`pip install "jax[cuda12]==0.8.1"`, matching the
+  pinned version) works but does not help: on an RTX PRO 6000 (Blackwell) the warmup took
+  about 100 s and steps 49 ms median (95th percentile 250 ms), against 19 s and 41 ms (53 ms)
+  on the CPU of the same machine. The problem is too small for the GPU; keep the planner on CPU.
   On a machine with an NVIDIA GPU but CPU-only jaxlib, every JAX import prints "An NVIDIA
   GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling
   back to cpu." This is harmless.

@@ -445,10 +445,13 @@ python scripts/visualize_demo.py --dataset data/lerobot/dexmulti_grasp_pull --ch
 
 `--dataset` also takes a Hub id; the videos are then downloaded too.
 
-Once uploaded, the datasets can also be browsed with the Hugging Face
-[LeRobot dataset visualizer](https://huggingface.co/spaces/lerobot/visualize_dataset)
-(camera videos and the state / action / skill curves; it does not render point clouds).
-<!-- TODO(release): check the visualizer on the uploaded datasets and add direct links. -->
+The datasets can also be browsed in the browser with the Hugging Face LeRobot dataset
+visualizer (camera videos and the state / action / skill curves; it does not render point
+clouds):
+[grasp_pull](https://huggingface.co/spaces/lerobot/visualize_dataset?path=/HJ666/dexmulti_grasp_pull/episode_0),
+[grasp_open](https://huggingface.co/spaces/lerobot/visualize_dataset?path=/HJ666/dexmulti_grasp_open/episode_0),
+[grasp_grasp](https://huggingface.co/spaces/lerobot/visualize_dataset?path=/HJ666/dexmulti_grasp_grasp/episode_0),
+[grasp_open_sample_efficiency](https://huggingface.co/spaces/lerobot/visualize_dataset?path=/HJ666/dexmulti_grasp_open_sample_efficiency/episode_0).
 
 ## Recording your own data
 
