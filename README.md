@@ -6,8 +6,6 @@
 
 <img src="assets/media/iros2026.png" alt="IROS 2026, Pittsburgh" width="200">
 
-**IROS 2026 · Pittsburgh, USA**
-
 [Hao Jiang](https://haojiang4400.github.io), Yue Wu, Yue Wang, Gaurav S. Sukhatme, Daniel Seita
 
 [![Website](https://img.shields.io/badge/Project-Website-1f6feb?style=for-the-badge&logo=githubpages&logoColor=white)](https://dexmulti.github.io/)
@@ -95,10 +93,14 @@ pip install -e ".[perception,planner]"     # optional: contact maps, alignment p
 ## 🚀 Quick start (no robot)
 
 ```bash
-python scripts/download_data.py --dataset grasp_pull                                  # -> data/lerobot/dexmulti_grasp_pull
-python scripts/visualize_demo.py --dataset data/lerobot/dexmulti_grasp_pull --episode 0   # viser at http://localhost:8080
+# download one task (-> data/lerobot/dexmulti_grasp_pull)
+python scripts/download_data.py --dataset grasp_pull
+# browse a demonstration in viser (http://localhost:8080)
+python scripts/visualize_demo.py --dataset data/lerobot/dexmulti_grasp_pull --episode 0
+# convert to the npz layout (episodes, keyframes, skill library)
 python scripts/lerobot_to_npz.py --dataset data/lerobot/dexmulti_grasp_pull --out data/npz/grasp_pull
-python scripts/retrieve_offline.py --session data/npz/grasp_pull                       # leave-one-out retrieval (--viz to inspect)
+# leave-one-out retrieval on the recorded demos (--viz to inspect)
+python scripts/retrieve_offline.py --session data/npz/grasp_pull
 pytest
 ```
 
