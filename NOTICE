@@ -1,0 +1,23 @@
+DexMulti includes or adapts the following third-party work. License texts are in licenses/
+and assets/xarm7_leap/licenses/.
+
+dexmulti/alignment/pyroki_planner.py
+  Online planning problem adapted from the examples of pyronot at commit cce517c
+  (https://github.com/CoMMALab/pyroffi, formerly CoMMALab/pyronot), based on PyRoki
+  (https://github.com/chungmin99/pyroki). MIT License, Copyright (c) 2025 Chung Min Kim.
+  -> licenses/pyronot-MIT.txt
+
+assets/xarm7_leap/
+  xarm7_leap_right_spheres.urdf: collision-sphere approximation generated with foam
+  (https://github.com/CoMMALab/foam). Copyright (c) 2025 Purdue University, MIT-style license.
+  -> assets/xarm7_leap/licenses/foam.txt
+  leap_hand/*.stl: LEAP Hand model (https://github.com/leap-hand/LEAP_Hand_Sim).
+  Copyright 2023 Ananye Agarwal, MIT License. -> assets/xarm7_leap/licenses/LEAP_Hand_Sim-MIT.txt
+  meshes/visual/*.glb: xArm7 visual meshes as distributed with ManiSkill
+  (https://github.com/haosulab/ManiSkill, Apache-2.0), originally from UFACTORY xarm_ros
+  (https://github.com/xArm-Developer/xarm_ros, BSD-3-Clause, Copyright (c) 2018 UFACTORY Inc.).
+  -> assets/xarm7_leap/licenses/ManiSkill-Apache-2.0.txt, assets/xarm7_leap/licenses/xarm_ros-BSD-3-Clause.txt
+
+baselines/object_centric_dp3/idp3/
+  Adapted from Improved 3D Diffusion Policy (https://github.com/YanjieZe/Improved-3D-Diffusion-Policy),
+  MIT License, Copyright (c) 2024 Yanjie Ze. -> baselines/object_centric_dp3/idp3/LICENSE

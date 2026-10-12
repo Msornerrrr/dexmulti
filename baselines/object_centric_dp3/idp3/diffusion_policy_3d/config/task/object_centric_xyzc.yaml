@@ -1,0 +1,43 @@
+# DexMulti object-centric DP3, v3: xyz + hand-contact channel (512x4 each).
+# Originally `task/multi_pc_segmented_v3.yaml` in the iDP3 fork (content unchanged except zarr_path
+# semantics: absolute or relative to the launch CWD). Build the zarr with object_centric_dp3/convert.py.
+name: dex_custom
+
+task_name: dex_custom
+
+shape_meta: &shape_meta
+  # acceptable types: rgb, low_dim
+  obs:
+    eef_pos:
+      shape: [3]
+      type: low_dim
+    eef_rot9d:
+      shape: [9]
+      type: low_dim
+    hand_joint:
+      shape: [16]
+      type: low_dim
+    object_pc:
+      shape: [512, 4]
+      type: point_cloud
+    drawer_pc:
+      shape: [512, 4]
+      type: point_cloud
+  action:
+    shape: [28]
+
+env_runner: null
+
+dataset:
+  _target_: diffusion_policy_3d.dataset.custom_dataset.DexCustomDataset
+  zarr_path: data/${data_name}.zarr
+  shape_meta: ${shape_meta}
+  horizon: ${horizon}
+  pad_before: ${eval:'${n_obs_steps}-1+${n_latency_steps}'}
+  pad_after: ${eval:'${n_action_steps}-1'}
+  n_obs_steps: ${n_obs_steps}
+  n_action_steps: ${n_action_steps}
+  n_latency_steps: ${n_latency_steps}
+  seed: 42
+  val_ratio: 0.02
+  max_train_episodes: 90

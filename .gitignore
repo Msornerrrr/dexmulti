@@ -1,0 +1,14 @@
+__pycache__/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.venv/
+/data/
+outputs/
+output/
+wandb/
+multirun/
+baselines/**/data/
+*.zarr/
+*.ckpt

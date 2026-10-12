@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dexmulti"
+version = "0.1.0"
+description = "Concurrent Prehensile and Nonprehensile Manipulation: A Practical Approach to Multi-Stage Dexterous Tasks (IROS 2026)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE", "licenses/*"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.10"]
+
+[project.optional-dependencies]
+perception = ["open3d>=0.17", "scikit-learn>=1.2"]
+# Pinned to the versions used on the robot. Needs Python >= 3.11 (jax 0.8.1).
+planner = [
+  "pyronot @ git+https://github.com/CoMMALab/pyroffi.git@cce517c49e0a99e6efebb98c5bd06e0b1fc3f985",
+  "jaxls @ git+https://github.com/brentyi/jaxls.git@eafb61ce2b51c9d4656cfe753e9f016575f2306a",
+  "jax==0.8.1",
+  "jaxlib==0.8.1",
+  "jaxlie==1.5.0",
+  "jax_dataclasses==1.6.2",
+  "yourdfpy==0.0.58",
+  "numpy<2.4",  # yourdfpy 0.0.58 calls float() on 1-element arrays
+  "termcolor",  # imported by pyronot but not declared by it
+]
+viz = ["viser>=1.0", "av>=12"]  # av: camera videos in scripts/visualize_demo.py
+data = ["huggingface_hub>=0.20"]
+# Read the released LeRobot datasets (dexmulti.data.lerobot) without lerobot / torch.
+lerobot = ["pyarrow>=14", "huggingface_hub>=0.20"]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["dexmulti*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

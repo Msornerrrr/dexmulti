@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper."
+type: software
+title: "DexMulti"
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Jiang
+    given-names: Hao
+  - family-names: Wu
+    given-names: Yue
+  - family-names: Wang
+    given-names: Yue
+  - family-names: Sukhatme
+    given-names: Gaurav S.
+  - family-names: Seita
+    given-names: Daniel
+preferred-citation:
+  type: conference-paper
+  title: "Concurrent Prehensile and Nonprehensile Manipulation: A Practical Approach to Multi-Stage Dexterous Tasks"
+  authors:
+    - family-names: Jiang
+      given-names: Hao
+    - family-names: Wu
+      given-names: Yue
+    - family-names: Wang
+      given-names: Yue
+    - family-names: Sukhatme
+      given-names: Gaurav S.
+    - family-names: Seita
+      given-names: Daniel
+  collection-title: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2603.11655"

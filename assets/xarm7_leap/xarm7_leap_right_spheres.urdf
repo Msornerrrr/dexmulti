@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="xarm7" path="assets/xarm7_leaphand/xarm7_leap_right.urdf">
+	<link name="link_base">
+		<inertial>
+			<origin rpy="0 0 0" xyz="-0.021131 -0.0016302 0.056488"></origin>
+			<mass value="0.88556"></mass>
+			<inertia ixx="0.0030595" ixy="0.00012259" ixz="-0.00062705" iyy="0.0037783" iyz="0.00027023" izz="0.0020125"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link_base.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.090543"></sphere>
+			</geometry>
+			<origin xyz="-0.009822685557497348 -0.0004200115631789337 0.045932544027745804" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.08327"></sphere>
+			</geometry>
+			<origin xyz="0.001143314442502652 0.0010229884368210664 0.09642654402774581" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link1">
+		<inertial>
+			<origin rpy="0 0 0" xyz="-0.0002 0.02905 -0.01233"></origin>
+			<mass value="2.382"></mass>
+			<inertia ixx="0.0056905" ixy="-1.579e-05" ixz="5.125e-06" iyy="0.0049566" iyz="-0.000873378" izz="0.003316654"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link1.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.082036"></sphere>
+			</geometry>
+			<origin xyz="0.00011850103334569171 0.016853344212451223 -0.00018040880377904328" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.076086"></sphere>
+			</geometry>
+			<origin xyz="-0.0002344989666543083 -0.0047386557875487775 -0.06557640880377905" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link2">
+		<inertial>
+			<origin rpy="0 0 0" xyz="0.00022 -0.12856 0.01735"></origin>
+			<mass value="1.869"></mass>
+			<inertia ixx="0.0095989" ixy="1.541e-06" ixz="5.56e-06" iyy="0.00382472" iyz="-0.00317156" izz="0.007565669"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link2.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.081135"></sphere>
+			</geometry>
+			<origin xyz="-0.0003014605783935966 -0.1333216654906158 0.0016707879268057085" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.081483"></sphere>
+			</geometry>
+			<origin xyz="-0.0017104605783935967 -0.09539866549061579 0.07280178792680571" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.059776"></sphere>
+			</geometry>
+			<origin xyz="-0.015401460578393597 0.005834334509384212 0.09610278792680571" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.057029"></sphere>
+			</geometry>
+			<origin xyz="0.022086539421606405 0.0002483345093842182 0.09450478792680571" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link3">
+		<inertial>
+			<origin rpy="0 0 0" xyz="0.0466 -0.02463 -0.00768"></origin>
+			<mass value="1.6383"></mass>
+			<inertia ixx="0.00310955" ixy="0.00030837" ixz="-0.00058453" iyy="0.00264483" iyz="0.000338893" izz="0.0026624"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link3.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.085349"></sphere>
+			</geometry>
+			<origin xyz="0.013209131899725777 0.01003219089153077 -0.04565185660528091" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.083065"></sphere>
+			</geometry>
+			<origin xyz="0.05079413189972577 -0.003523809108469231 -0.0004138566052809163" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link4">
+		<inertial>
+			<origin rpy="0 0 0" xyz="0.07047 -0.11575 0.012"></origin>
+			<mass value="1.7269"></mass>
+			<inertia ixx="0.005889" ixy="0.00137112" ixz="0.00088143" iyy="0.00359703" iyz="-0.001762155" izz="0.00543244"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link4.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.066979"></sphere>
+			</geometry>
+			<origin xyz="0.07793559973734299 -0.13077204715368318 0.007634861635274347" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.070637"></sphere>
+			</geometry>
+			<origin xyz="0.077846599737343 -0.09137604715368317 0.014254861635274348" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.071681"></sphere>
+			</geometry>
+			<origin xyz="0.069955599737343 -0.08038304715368318 0.06174686163527435" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.059201"></sphere>
+			</geometry>
+			<origin xyz="0.026581599737342993 -0.023333047153683173 0.08347086163527434" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.05454"></sphere>
+			</geometry>
+			<origin xyz="-0.0011094002626570038 -0.0011250471536831744 0.08654786163527434" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link5">
+		<inertial>
+			<origin rpy="0 0 0" xyz="-0.00032 0.01604 -0.026"></origin>
+			<mass value="1.3203"></mass>
+			<inertia ixx="0.00534665" ixy="1.5117e-05" ixz="-3.69e-07" iyy="0.0049779" iyz="-0.00022132" izz="0.0013624"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link5.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.044377"></sphere>
+			</geometry>
+			<origin xyz="0.00011264382708814141 0.06108914765800623 -0.08047913520490677" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.058074"></sphere>
+			</geometry>
+			<origin xyz="0.0020476438270881415 0.00350914765800623 -0.14488713520490676" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.056247"></sphere>
+			</geometry>
+			<origin xyz="-7.53561729118586e-05 0.053318147658006236 -0.03188613520490676" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.055407"></sphere>
+			</geometry>
+			<origin xyz="-0.0006303561729118585 0.04021514765800623 -0.0001451352049067628" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.049012"></sphere>
+			</geometry>
+			<origin xyz="-0.0027083561729118587 0.04267714765800623 -0.10967313520490676" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link6">
+		<inertial>
+			<origin rpy="0 0 0" xyz="0.06469 0.03278 0.02141"></origin>
+			<mass value="1.325"></mass>
+			<inertia ixx="0.0014745" ixy="-0.000488" ixz="0.0002953" iyy="0.0019037" iyz="0.00014749" izz="0.0023652"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link6.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.060912"></sphere>
+			</geometry>
+			<origin xyz="0.07598182 0.020571005 6.90150000000004e-05" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.063307"></sphere>
+			</geometry>
+			<origin xyz="0.02012482 0.0001880050000000015 0.021902015" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link7">
+		<inertial>
+			<origin rpy="0 0 0" xyz="0 -0.00677 -0.01098"></origin>
+			<mass value="0.17"></mass>
+			<inertia ixx="9.3e-05" ixy="-0.0" ixz="-0.0" iyy="5.87e-05" iyz="-3.6e-06" izz="0.000132"></inertia>
+		</inertial>
+		<visual>
+			<geometry>
+				<mesh filename="meshes/visual/link7.glb"></mesh>
+			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 0"></origin>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.044033"></sphere>
+			</geometry>
+			<origin xyz="0.00015747225003949966 0.0013680348926104636 -0.013522055370485246" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.043479"></sphere>
+			</geometry>
+			<origin xyz="-0.0098065277499605 -0.014765965107389535 -0.013716055370485246" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="palm_link">
+		<visual>
+			<origin xyz="-0.020095249652862544332 0.025757756134899473244 -0.034722403578460216134" rpy="0 -0 0"></origin>
+			<geometry>
+				<mesh filename="leap_hand/palm_lower.stl"></mesh>
+			</geometry>
+			<material name="palm_link_material">
+				<color rgba="0.60392156862745094426 0.14901960784313725283 0.14901960784313725283 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.039789"></sphere>
+			</geometry>
+			<origin xyz="-0.028286202573065435 -0.07457055094995743 -0.01034909463593224" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.040824"></sphere>
+			</geometry>
+			<origin xyz="-0.056243202573065434 -0.06221855094995743 -0.010825094635932241" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.038808"></sphere>
+			</geometry>
+			<origin xyz="-0.08356420257306543 -0.016428550949957425 -0.004875094635932241" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.03593"></sphere>
+			</geometry>
+			<origin xyz="-0.025046202573065435 0.0048034490500425756 -0.009687094635932241" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.041135"></sphere>
+			</geometry>
+			<origin xyz="-0.07555020257306544 -0.060854550949957426 -0.01142109463593224" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.033777"></sphere>
+			</geometry>
+			<origin xyz="-0.023402202573065436 -0.03543455094995743 -0.008173094635932241" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.032429"></sphere>
+			</geometry>
+			<origin xyz="-0.06831620257306543 0.007944449050042574 0.0011699053640677592" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.042381"></sphere>
+			</geometry>
+			<origin xyz="-0.04810020257306544 -0.005963550949957427 -0.01123709463593224" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.237"></mass>
+			<inertia ixx="0.000354094" ixy="-0.000001193" ixz="-0.000002445" iyy="0.000260915" iyz="-0.000002905" izz="0.000529257"></inertia>
+		</inertial>
+	</link>
+	<link name="mcp_joint_1">
+		<visual>
+			<origin xyz="0.0084069022611744960438 0.0077662438597169954416 0.014657354985032912051" rpy="1.6375789613220999807e-15 -1.0210473302491019535e-30 1.7177968783327987474e-31"></origin>
+			<geometry>
+				<mesh filename="leap_hand/mcp_joint.stl"></mesh>
+			</geometry>
+			<material name="mcp_joint_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.020985"></sphere>
+			</geometry>
+			<origin xyz="-0.026982533274505033 0.047353245564969865 0.015689956368142494" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.02176"></sphere>
+			</geometry>
+			<origin xyz="-0.028627533274505033 0.030571245564969863 0.017572956368142493" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.019796"></sphere>
+			</geometry>
+			<origin xyz="-0.017934533274505032 0.02352324556496986 0.010439956368142494" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.015665"></sphere>
+			</geometry>
+			<origin xyz="-0.005549533274505034 0.017187245564969863 0.024810956368142494" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.01215"></sphere>
+			</geometry>
+			<origin xyz="0.001095466725494966 0.003706245564969863 0.030421956368142496" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014119"></sphere>
+			</geometry>
+			<origin xyz="0.006035466725494966 0.01781324556496986 0.019706956368142493" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014021"></sphere>
+			</geometry>
+			<origin xyz="0.001205466725494965 0.013901245564969862 0.0021439563681424946" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.012738"></sphere>
+			</geometry>
+			<origin xyz="-0.0012475332745050336 0.002706245564969862 -0.001246043631857506" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.044"></mass>
+			<inertia ixx="0.000011499" ixy="0.000003049" ixz="0.000000121" iyy="0.000007796" iyz="0.000000112" izz="0.000014759"></inertia>
+		</inertial>
+	</link>
+	<link name="pip_1">
+		<visual>
+			<origin xyz="0.0096433630922713280131 0.00029999999999998951117 0.00078403401041737645627" rpy="-1.570796326794896558 -1.570796326794896336 0"></origin>
+			<geometry>
+				<mesh filename="leap_hand/pip.stl"></mesh>
+			</geometry>
+			<material name="pip_1_material">
+				<color rgba="0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.021294"></sphere>
+			</geometry>
+			<origin xyz="0.0013183287280355855 0.0003722564232878758 -0.012004612346663127" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.021481"></sphere>
+			</geometry>
+			<origin xyz="0.012929328728035585 -0.00032274357671212425 -0.011825612346663128" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.032"></mass>
+			<inertia ixx="0.000004798" ixy="0.000000012" ixz="0.000000004" iyy="0.000002862" iyz="0.000000011" izz="0.000004234"></inertia>
+		</inertial>
+	</link>
+	<link name="dip_1">
+		<visual>
+			<origin xyz="0.021133352895225002849 -0.0084321191467048792201 0.0097850881620952408213" rpy="-3.141592653589793116 4.5075111242164408299e-32 4.4395481053923607589e-32"></origin>
+			<geometry>
+				<mesh filename="leap_hand/dip.stl"></mesh>
+			</geometry>
+			<material name="dip_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02662"></sphere>
+			</geometry>
+			<origin xyz="0.005323289648014953 -0.02954993894129573 0.014429594050312381" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.015464"></sphere>
+			</geometry>
+			<origin xyz="0.0006542896480149531 -0.00512193894129573 -0.0005634059496876197" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014782"></sphere>
+			</geometry>
+			<origin xyz="-0.000724710351985047 -0.01198693894129573 0.027285594050312383" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.010937"></sphere>
+			</geometry>
+			<origin xyz="0.0007492896480149527 -0.0006169389412957298 0.030802594050312382" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.037"></mass>
+			<inertia ixx="0.000005542" ixy="-0.000000607" ixz="-0.000000017" iyy="0.000005727" iyz="-0.000000023" izz="0.000006682"></inertia>
+		</inertial>
+	</link>
+	<link name="fingertip_1">
+		<visual>
+			<origin xyz="0.013286424108533503169 -0.0061142383865419869249 0.014499999999999497666" rpy="3.141592653589793116 1.1993117970061734707e-33 4.4395481053923607589e-32"></origin>
+			<geometry>
+				<mesh filename="leap_hand/fingertip.stl"></mesh>
+			</geometry>
+			<material name="fingertip_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.019177"></sphere>
+			</geometry>
+			<origin xyz="-0.0011973506147788429 -0.035074868853575726 0.01579675968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.013442"></sphere>
+			</geometry>
+			<origin xyz="-0.0010253506147788428 -0.004132868853575725 0.029140759682811643" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.01343"></sphere>
+			</geometry>
+			<origin xyz="0.0002196493852211571 -0.015804868853575724 0.02688375968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.017184"></sphere>
+			</geometry>
+			<origin xyz="-0.001103350614778843 -0.021173868853575726 0.008436759682811639" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014854"></sphere>
+			</geometry>
+			<origin xyz="0.002609649385221157 -0.012335868853575724 0.00217575968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.011439"></sphere>
+			</geometry>
+			<origin xyz="-0.0020693506147788426 -0.0010718688535757241 -0.0012772403171883613" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.016"></mass>
+			<inertia ixx="0.000003368" ixy="0.000000115" ixz="0" iyy="0.000001556" iyz="0" izz="0.000002863"></inertia>
+		</inertial>
+	</link>
+	<link name="mcp_joint_2">
+		<visual>
+			<origin xyz="0.0084069022611744960438 0.0077662438597169954416 0.014657354985032913786" rpy="1.6375789613220999807e-15 -1.0076465469034000467e-30 2.1209300131419907151e-61"></origin>
+			<geometry>
+				<mesh filename="leap_hand/mcp_joint.stl"></mesh>
+			</geometry>
+			<material name="mcp_joint_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.020985"></sphere>
+			</geometry>
+			<origin xyz="-0.026982533274505033 0.047353245564969865 0.0156899563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.02176"></sphere>
+			</geometry>
+			<origin xyz="-0.028627533274505033 0.030571245564969863 0.0175729563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.019796"></sphere>
+			</geometry>
+			<origin xyz="-0.017934533274505032 0.02352324556496986 0.0104399563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.015665"></sphere>
+			</geometry>
+			<origin xyz="-0.005549533274505034 0.017187245564969863 0.024810956368142498" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.01215"></sphere>
+			</geometry>
+			<origin xyz="0.001095466725494966 0.003706245564969863 0.030421956368142503" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014119"></sphere>
+			</geometry>
+			<origin xyz="0.006035466725494966 0.01781324556496986 0.0197069563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014021"></sphere>
+			</geometry>
+			<origin xyz="0.001205466725494965 0.013901245564969862 0.0021439563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.012738"></sphere>
+			</geometry>
+			<origin xyz="-0.0012475332745050336 0.002706245564969862 -0.0012460436318575008" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.044"></mass>
+			<inertia ixx="0.000011499" ixy="0.000003049" ixz="0.000000121" iyy="0.000007796" iyz="0.000000112" izz="0.000014759"></inertia>
+		</inertial>
+	</link>
+	<link name="pip_2">
+		<visual>
+			<origin xyz="0.0096433630922713280131 0.00029999999999999471534 0.00078403401041737645627" rpy="-1.570796326794896558 -1.570796326794896336 0"></origin>
+			<geometry>
+				<mesh filename="leap_hand/pip.stl"></mesh>
+			</geometry>
+			<material name="pip_1_material">
+				<color rgba="0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.021294"></sphere>
+			</geometry>
+			<origin xyz="0.0013183287280355855 0.000372256423287881 -0.012004612346663127" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.021481"></sphere>
+			</geometry>
+			<origin xyz="0.012929328728035585 -0.00032274357671211904 -0.011825612346663128" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.032"></mass>
+			<inertia ixx="0.000004798" ixy="0.000000012" ixz="0.000000004" iyy="0.000002862" iyz="0.000000011" izz="0.000004234"></inertia>
+		</inertial>
+	</link>
+	<link name="dip_2">
+		<visual>
+			<origin xyz="0.021133352895225002849 -0.0084321191467048653423 0.0097850881620952373519" rpy="-3.141592653589793116 2.1146933785271955805e-32 1.4408183216511868558e-31"></origin>
+			<geometry>
+				<mesh filename="leap_hand/dip.stl"></mesh>
+			</geometry>
+			<material name="dip_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02662"></sphere>
+			</geometry>
+			<origin xyz="0.005323289648014953 -0.029549938941295716 0.014429594050312378" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.015464"></sphere>
+			</geometry>
+			<origin xyz="0.0006542896480149531 -0.005121938941295716 -0.0005634059496876231" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014782"></sphere>
+			</geometry>
+			<origin xyz="-0.000724710351985047 -0.011986938941295716 0.027285594050312376" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.010937"></sphere>
+			</geometry>
+			<origin xyz="0.0007492896480149527 -0.0006169389412957159 0.03080259405031238" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.037"></mass>
+			<inertia ixx="0.000005542" ixy="-0.000000607" ixz="-0.000000017" iyy="0.000005727" iyz="-0.000000023" izz="0.000006682"></inertia>
+		</inertial>
+	</link>
+	<link name="fingertip_2">
+		<visual>
+			<origin xyz="0.01328642410853349623 -0.0061142383865420008027 0.014499999999999495931" rpy="3.141592653589793116 -4.3179597882835943107e-33 1.4408183216511868558e-31"></origin>
+			<geometry>
+				<mesh filename="leap_hand/fingertip.stl"></mesh>
+			</geometry>
+			<material name="fingertip_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.019177"></sphere>
+			</geometry>
+			<origin xyz="-0.0011973506147788498 -0.03507486885357574 0.015796759682811638" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.013442"></sphere>
+			</geometry>
+			<origin xyz="-0.0010253506147788497 -0.004132868853575739 0.02914075968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.01343"></sphere>
+			</geometry>
+			<origin xyz="0.00021964938522115016 -0.015804868853575738 0.02688375968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.017184"></sphere>
+			</geometry>
+			<origin xyz="-0.00110335061477885 -0.02117386885357574 0.008436759682811639" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014854"></sphere>
+			</geometry>
+			<origin xyz="0.00260964938522115 -0.012335868853575738 0.002175759682811638" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.011439"></sphere>
+			</geometry>
+			<origin xyz="-0.0020693506147788495 -0.001071868853575738 -0.001277240317188363" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.016"></mass>
+			<inertia ixx="0.000003368" ixy="0.000000115" ixz="0" iyy="0.000001556" iyz="0" izz="0.000002863"></inertia>
+		</inertial>
+	</link>
+	<link name="mcp_joint_3">
+		<visual>
+			<origin xyz="0.0084069022611744995133 0.0077662438597169963089 0.014657354985032913786" rpy="1.6375789613220999807e-15 -1.0059504988632626953e-30 5.729641584552035421e-32"></origin>
+			<geometry>
+				<mesh filename="leap_hand/mcp_joint.stl"></mesh>
+			</geometry>
+			<material name="mcp_joint_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.020985"></sphere>
+			</geometry>
+			<origin xyz="-0.026982533274505026 0.047353245564969865 0.0156899563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.02176"></sphere>
+			</geometry>
+			<origin xyz="-0.028627533274505026 0.030571245564969863 0.0175729563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.019796"></sphere>
+			</geometry>
+			<origin xyz="-0.017934533274505025 0.02352324556496986 0.0104399563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.015665"></sphere>
+			</geometry>
+			<origin xyz="-0.005549533274505027 0.017187245564969863 0.024810956368142498" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.01215"></sphere>
+			</geometry>
+			<origin xyz="0.001095466725494973 0.003706245564969863 0.030421956368142503" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014119"></sphere>
+			</geometry>
+			<origin xyz="0.006035466725494973 0.01781324556496986 0.0197069563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014021"></sphere>
+			</geometry>
+			<origin xyz="0.001205466725494972 0.013901245564969862 0.0021439563681425" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.012738"></sphere>
+			</geometry>
+			<origin xyz="-0.0012475332745050267 0.002706245564969862 -0.0012460436318575008" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.044"></mass>
+			<inertia ixx="0.000011499" ixy="0.000003049" ixz="0.000000121" iyy="0.000007796" iyz="0.000000112" izz="0.000014759"></inertia>
+		</inertial>
+	</link>
+	<link name="pip_3">
+		<visual>
+			<origin xyz="0.0096433630922713314826 0.00029999999999998083755 0.00078403401041737645627" rpy="-1.570796326794896558 -1.570796326794896336 0"></origin>
+			<geometry>
+				<mesh filename="leap_hand/pip.stl"></mesh>
+			</geometry>
+			<material name="pip_1_material">
+				<color rgba="0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.021294"></sphere>
+			</geometry>
+			<origin xyz="0.001318328728035589 0.0003722564232878671 -0.012004612346663127" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.021481"></sphere>
+			</geometry>
+			<origin xyz="0.012929328728035589 -0.0003227435767121329 -0.011825612346663128" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.032"></mass>
+			<inertia ixx="0.000004798" ixy="0.000000012" ixz="0.000000004" iyy="0.000002862" iyz="0.000000011" izz="0.000004234"></inertia>
+		</inertial>
+	</link>
+	<link name="dip_3">
+		<visual>
+			<origin xyz="0.021133352895225006318 -0.0084321191467048653423 0.0097850881620952373519" rpy="-3.141592653589793116 -1.4095651113919093005e-33 1.5565411607615035382e-32"></origin>
+			<geometry>
+				<mesh filename="leap_hand/dip.stl"></mesh>
+			</geometry>
+			<material name="dip_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.02662"></sphere>
+			</geometry>
+			<origin xyz="0.005323289648014956 -0.029549938941295716 0.014429594050312378" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.015464"></sphere>
+			</geometry>
+			<origin xyz="0.0006542896480149565 -0.005121938941295716 -0.0005634059496876231" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014782"></sphere>
+			</geometry>
+			<origin xyz="-0.0007247103519850435 -0.011986938941295716 0.027285594050312376" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.010937"></sphere>
+			</geometry>
+			<origin xyz="0.0007492896480149561 -0.0006169389412957159 0.03080259405031238" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.037"></mass>
+			<inertia ixx="0.000005542" ixy="-0.000000607" ixz="-0.000000017" iyy="0.000005727" iyz="-0.000000023" izz="0.000006682"></inertia>
+		</inertial>
+	</link>
+	<link name="fingertip_3">
+		<visual>
+			<origin xyz="0.013286424108533501434 -0.0061142383865419869249 0.0144999999999994994" rpy="3.141592653589793116 8.6170716950575402125e-33 1.5565411607615035382e-32"></origin>
+			<geometry>
+				<mesh filename="leap_hand/fingertip.stl"></mesh>
+			</geometry>
+			<material name="fingertip_1_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.019177"></sphere>
+			</geometry>
+			<origin xyz="-0.0011973506147788446 -0.035074868853575726 0.01579675968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.013442"></sphere>
+			</geometry>
+			<origin xyz="-0.0010253506147788445 -0.004132868853575725 0.029140759682811643" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.01343"></sphere>
+			</geometry>
+			<origin xyz="0.00021964938522115536 -0.015804868853575724 0.02688375968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.017184"></sphere>
+			</geometry>
+			<origin xyz="-0.0011033506147788447 -0.021173868853575726 0.008436759682811639" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014854"></sphere>
+			</geometry>
+			<origin xyz="0.0026096493852211552 -0.012335868853575724 0.00217575968281164" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.011439"></sphere>
+			</geometry>
+			<origin xyz="-0.0020693506147788443 -0.0010718688535757241 -0.0012772403171883613" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.016"></mass>
+			<inertia ixx="0.000003368" ixy="0.000000115" ixz="0" iyy="0.000001556" iyz="0" izz="0.000002863"></inertia>
+		</inertial>
+	</link>
+	<link name="pip_4">
+		<visual>
+			<origin xyz="-0.0053566369077286714317 0.00029999999999999991951 0.00078403401041737819099" rpy="-1.570796326794896558 -1.570796326794896336 0"></origin>
+			<geometry>
+				<mesh filename="leap_hand/pip.stl"></mesh>
+			</geometry>
+			<material name="pip_1_material">
+				<color rgba="0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.021294"></sphere>
+			</geometry>
+			<origin xyz="-0.013681671271964414 0.0003722564232878862 -0.012004612346663127" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.021481"></sphere>
+			</geometry>
+			<origin xyz="-0.002070671271964414 -0.00032274357671211384 -0.011825612346663126" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.032"></mass>
+			<inertia ixx="0.000004798" ixy="0.000000012" ixz="0.000000004" iyy="0.000002862" iyz="0.000000011" izz="0.000004234"></inertia>
+		</inertial>
+	</link>
+	<link name="thumb_pip">
+		<visual>
+			<origin xyz="0.011961920770611186859 -5.3082538364890297089e-16 -0.015852648956664199681" rpy="1.570796326794896558 1.6050198443300152637e-46 -3.9204996250525192755e-59"></origin>
+			<geometry>
+				<mesh filename="leap_hand/thumb_pip.stl"></mesh>
+			</geometry>
+			<material name="thumb_pip_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.008811"></sphere>
+			</geometry>
+			<origin xyz="-0.00032999964909670746 -0.015900000000000532 -0.016379259973414537" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.010723"></sphere>
+			</geometry>
+			<origin xyz="0.0007030003509032925 -0.015074000000000531 -0.008942259973414537" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.009144"></sphere>
+			</geometry>
+			<origin xyz="-0.006960999649096708 -0.010044000000000532 -0.0023702599734145378" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.011165"></sphere>
+			</geometry>
+			<origin xyz="0.006830000350903293 -0.006651000000000531 -0.002540259973414538" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.008775"></sphere>
+			</geometry>
+			<origin xyz="-0.0033389996490967074 0.004199999999999469 -0.0015002599734145368" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.010081"></sphere>
+			</geometry>
+			<origin xyz="0.006314000350903293 0.012933999999999468 -0.003469259973414537" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.010333"></sphere>
+			</geometry>
+			<origin xyz="-0.005224999649096707 0.014940999999999469 -0.007987259973414537" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.009724"></sphere>
+			</geometry>
+			<origin xyz="0.0013440003509032925 0.01589999999999947 -0.016081259973414537" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.003"></mass>
+			<inertia ixx="0.000000593" ixy="0" ixz="0" iyy="0.000000549" iyz="0" izz="0.000000224"></inertia>
+		</inertial>
+	</link>
+	<link name="thumb_dip">
+		<visual>
+			<origin xyz="0.043968715707239175439 0.057952952973709198625 -0.0086286764493694757122" rpy="1.9428902930940098942e-16 3.2751579226442200773e-15 1.1123758529657360012e-46"></origin>
+			<geometry>
+				<mesh filename="leap_hand/thumb_dip.stl"></mesh>
+			</geometry>
+			<material name="thumb_dip_material">
+				<color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.024105"></sphere>
+			</geometry>
+			<origin xyz="-0.002391030682719449 0.020323654069194765 -0.015194046136619784" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.019592"></sphere>
+			</geometry>
+			<origin xyz="-0.0007770306827194489 0.002898654069194765 -0.014584046136619783" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.014152"></sphere>
+			</geometry>
+			<origin xyz="0.0006339693172805506 0.04200965406919477 -0.029237046136619784" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.012683"></sphere>
+			</geometry>
+			<origin xyz="-0.0006010306827194489 0.04383265406919477 0.001164953863380216" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.020732"></sphere>
+			</geometry>
+			<origin xyz="-0.000500030682719449 0.026042654069194766 -0.009700046136619784" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.038"></mass>
+			<inertia ixx="0.000008474" ixy="0.000000241" ixz="0.000000026" iyy="0.000003841" iyz="0.000000025" izz="0.000007679"></inertia>
+		</inertial>
+	</link>
+	<link name="thumb_fingertip">
+		<visual>
+			<origin xyz="0.062559538462667388381 0.078459682911396988469 0.048992911807332215068" rpy="4.3790577010156367543e-47 -3.3306690738754701143e-16 1.2042408677791935383e-46"></origin>
+			<geometry>
+				<mesh filename="leap_hand/thumb_fingertip.stl"></mesh>
+			</geometry>
+			<material name="thumb_fingertip_material">
+				<color rgba="0.60392156862745094426 0.14901960784313725283 0.14901960784313725283 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<sphere radius="0.023697"></sphere>
+			</geometry>
+			<origin xyz="0.004628890372753519 -0.020697506771176013 -0.01417344070143007" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.019669"></sphere>
+			</geometry>
+			<origin xyz="0.0014898903727535192 -0.0022335067711760116 -0.014372440701430069" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.016537"></sphere>
+			</geometry>
+			<origin xyz="-0.0011431096272464802 -0.05106750677117601 -0.014595440701430068" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.017642"></sphere>
+			</geometry>
+			<origin xyz="-0.0007691096272464809 -0.03814950677117601 -0.014629440701430069" rpy="0 0 0"></origin>
+		</collision>
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0.049"></mass>
+			<inertia ixx="0.000020372" ixy="-0.000000489" ixz="-0.00000003" iyy="0.000004336" iyz="-0.000000097" izz="0.000019845"></inertia>
+		</inertial>
+	</link>
+	<joint name="xarm7_joint1" type="revolute">
+		<origin rpy="0 0 0" xyz="0 0 0.267"></origin>
+		<parent link="link_base"></parent>
+		<child link="link1"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="50" lower="-6.28318530718" upper="6.28318530718" velocity="3.14"></limit>
+		<dynamics damping="10" friction="1"></dynamics>
+	</joint>
+	<joint name="xarm7_joint2" type="revolute">
+		<origin rpy="-1.5708 0 0" xyz="0 0 0"></origin>
+		<parent link="link1"></parent>
+		<child link="link2"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="50" lower="-2.059" upper="2.0944" velocity="3.14"></limit>
+		<dynamics damping="10" friction="1"></dynamics>
+	</joint>
+	<joint name="xarm7_joint3" type="revolute">
+		<origin rpy="1.5708 0 0" xyz="0 -0.293 0"></origin>
+		<parent link="link2"></parent>
+		<child link="link3"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="30" lower="-6.28318530718" upper="6.28318530718" velocity="3.14"></limit>
+		<dynamics damping="5" friction="1"></dynamics>
+	</joint>
+	<joint name="xarm7_joint4" type="revolute">
+		<origin rpy="1.5708 0 0" xyz="0.0525 0 0"></origin>
+		<parent link="link3"></parent>
+		<child link="link4"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="30" lower="-0.19198" upper="3.927" velocity="3.14"></limit>
+		<dynamics damping="5" friction="1"></dynamics>
+	</joint>
+	<joint name="xarm7_joint5" type="revolute">
+		<origin rpy="1.5708 0 0" xyz="0.0775 -0.3425 0"></origin>
+		<parent link="link4"></parent>
+		<child link="link5"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="30" lower="-6.28318530718" upper="6.28318530718" velocity="3.14"></limit>
+		<dynamics damping="5" friction="1"></dynamics>
+	</joint>
+	<joint name="xarm7_joint6" type="revolute">
+		<origin rpy="1.5708 0 0" xyz="0 0 0"></origin>
+		<parent link="link5"></parent>
+		<child link="link6"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="20" lower="-1.69297" upper="3.14159265359" velocity="3.14"></limit>
+		<dynamics damping="2" friction="1"></dynamics>
+	</joint>
+	<joint name="xarm7_joint7" type="revolute">
+		<origin rpy="-1.5708 0 0" xyz="0.076 0.097 0"></origin>
+		<parent link="link6"></parent>
+		<child link="link7"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="20" lower="-6.28318530718" upper="6.28318530718" velocity="3.14"></limit>
+		<dynamics damping="2" friction="1"></dynamics>
+	</joint>
+	<joint name="part_studio_joint" type="fixed">
+		<parent link="link7"></parent>
+		<child link="palm_link"></child>
+		<origin rpy="3.14 0 0" xyz="0.06 -0.0375 0.0135"></origin>
+	</joint>
+	<joint name="leap_joint0" type="revolute">
+		<origin xyz="-0.012200000000000007713 0.038099999999999994982 0.014500000000000000736" rpy="-1.570796326794896558 -1.0065212660796336576e-15 1.5707963267948943376"></origin>
+		<parent link="mcp_joint_1"></parent>
+		<child link="pip_1"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-1.047" upper="1.047"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint1" type="revolute">
+		<origin xyz="-0.0070952496528625457958 0.023057756134899472233 -0.01872240357846021927" rpy="1.5707963267948950037 1.5707963267948945596 0"></origin>
+		<parent link="palm_link"></parent>
+		<child link="mcp_joint_1"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.314" upper="2.23"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint2" type="revolute">
+		<origin xyz="0.01499999999999996822 0.014299999999999904801 -0.012999999999999824196" rpy="1.5707963267948958919 -1.570796326794896336 0"></origin>
+		<parent link="pip_1"></parent>
+		<child link="dip_1"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.506" upper="1.885"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint3" type="revolute">
+		<origin xyz="-4.0880582495572692636e-09 -0.036100004210367367397 0.00020000000000007858714" rpy="4.5935029425113685044e-17 -2.8730071914463794583e-16 4.4395481053923607589e-32"></origin>
+		<parent link="dip_1"></parent>
+		<child link="fingertip_1"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.366" upper="2.042"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint4" type="revolute">
+		<origin xyz="-0.012200000000000019856 0.038099999999999981104 0.01450000000000000594" rpy="-1.570796326794896558 -1.0065212760057939085e-15 1.5707963267948943376"></origin>
+		<parent link="mcp_joint_2"></parent>
+		<child link="pip_2"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-1.047" upper="1.047"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint5" type="revolute">
+		<origin xyz="-0.0070952496528625388569 -0.022392243865100525113 -0.018722403578460229678" rpy="1.570796326794896558 1.570796326794896558 0"></origin>
+		<parent link="palm_link"></parent>
+		<child link="mcp_joint_2"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.314" upper="2.23"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint6" type="revolute">
+		<origin xyz="0.014999999999999975159 0.014300000000000000211 -0.013000000000000018485" rpy="1.5707963267948958919 -1.570796326794896336 0"></origin>
+		<parent link="pip_2"></parent>
+		<child link="dip_2"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.506" upper="1.885"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint7" type="revolute">
+		<origin xyz="1.0061396160665481148e-16 -0.036099999999999854428 0.00020000000000007858714" rpy="4.5935029425113654229e-17 -2.8730071914463794583e-16 1.4408183216511868558e-31"></origin>
+		<parent link="dip_2"></parent>
+		<child link="fingertip_2"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.366" upper="2.042"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint8" type="revolute">
+		<origin xyz="-0.012200000000000004244 0.038100000000000001921 0.014499999999999999001" rpy="-1.570796326794896558 -1.0065212660796360242e-15 1.5707963267948943376"></origin>
+		<parent link="mcp_joint_3"></parent>
+		<child link="pip_3"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-1.047" upper="1.047"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint9" type="revolute">
+		<origin xyz="-0.0070952454426398371343 -0.067842243865100515521 -0.018722407666402932774" rpy="1.5707963267948950037 1.5707963267948945596 0"></origin>
+		<parent link="palm_link"></parent>
+		<child link="mcp_joint_3"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.314" upper="2.23"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint10" type="revolute">
+		<origin xyz="0.014999999999999971689 0.014299999999999951639 -0.012999999999999959505" rpy="1.5707963267948958919 -1.570796326794896336 0"></origin>
+		<parent link="pip_3"></parent>
+		<child link="dip_3"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.506" upper="1.885"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint11" type="revolute">
+		<origin xyz="9.7144514654701197287e-17 -0.036099999999999868305 0.00020000000000007511769" rpy="4.5935029425113685044e-17 -2.8730071914463799514e-16 1.5565411607615035382e-32"></origin>
+		<parent link="dip_3"></parent>
+		<child link="fingertip_3"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.366" upper="2.042"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint12" type="revolute">
+		<origin xyz="-0.069395249652862533996 -0.0012422438651005258004 -0.021622403578460215601" rpy="-8.2381766464939424156e-17 1.5707963267948956698 0"></origin>
+		<parent link="palm_link"></parent>
+		<child link="pip_4"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.349" upper="2.094"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint13" type="revolute">
+		<origin xyz="-2.7755575615628913511e-17 0.014300000000000005415 -0.013000000000000011546" rpy="1.5707963267948958919 -1.570796326794896336 0"></origin>
+		<parent link="pip_4"></parent>
+		<child link="thumb_pip"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-0.47" upper="2.443"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint14" type="revolute">
+		<origin xyz="0 0.014499999999999966041 -0.017000000000000053263" rpy="-1.570796326794896558 1.6050198443300131245e-46 -1.9721522630516624601e-31"></origin>
+		<parent link="thumb_pip"></parent>
+		<child link="thumb_dip"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-1.20" upper="1.90"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+	<joint name="leap_joint15" type="revolute">
+		<origin xyz="-1.249000902703301108e-16 0.046599999999999863753 0.00019999999999997710581" rpy="1.5063958491491781023e-44 5.4234187233935260503e-31 3.141592653589793116"></origin>
+		<parent link="thumb_dip"></parent>
+		<child link="thumb_fingertip"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="0.95" velocity="8.48" lower="-1.34" upper="1.88"></limit>
+		<joint_properties friction="0.0"></joint_properties>
+	</joint>
+</robot>

@@ -1,0 +1,191 @@
+# Vendored from the Improved-3D-Diffusion-Policy fork for the DexMulti object-centric
+# DP3 baseline. Changes vs. the fork are marked "DexMulti release"; all model /
+# training hyper-parameters are unchanged. Paper runs additionally override:
+#   horizon=16 n_action_steps=15 n_obs_steps=3 policy.se3_augmentation_cfg.use_aug=true
+#   policy.use_fourier_basis=false pc_encoder=<...> policy.pc_encoder_sharing=<...>
+defaults:
+  - task: object_centric_xyzc  # DexMulti release (fork default pointed to a missing task)
+  - _self_  # DexMulti release: explicit; same order hydra 1.1 used implicitly
+
+name: train_diffusion_unet_hybrid
+_target_: diffusion_policy_3d.workspace.idp3_workspace.iDP3Workspace
+
+task_name: ${task.name}
+shape_meta: ${task.shape_meta}
+exp_name: "debug"
+
+data_name: null
+
+# n_obs_steps: 2
+# n_obs_steps: 1
+n_obs_steps: 2
+
+# horizon: 4
+# n_action_steps: 4
+
+# horizon: 16
+# n_action_steps: 15
+
+
+horizon: 16
+n_action_steps: 15
+
+n_latency_steps: 1
+dataset_obs_steps: ${n_obs_steps}
+keypoint_visible_rate: 1.0
+obs_as_global_cond: True
+
+use_image: false
+
+pc_encoder: multi_stage_pointnet
+# multi_stage_pointnet | better_attention_pointnet  (others removed in this release)
+
+policy:
+  _target_: diffusion_policy_3d.policy.diffusion_pointcloud_policy.DiffusionPointcloudPolicy
+  use_point_crop: true
+  use_down_condition: true
+  use_mid_condition: true
+  use_up_condition: true
+  use_image: false
+  
+  diffusion_step_embed_dim: 128
+  down_dims: [256, 512, 1024]
+  
+
+  horizon: ${horizon}
+  kernel_size: 5
+  n_action_steps: ${n_action_steps}
+  n_groups: 8
+  n_obs_steps: ${n_obs_steps}
+  n_latency_steps: ${n_latency_steps}
+
+
+  noise_scheduler:
+    _target_: diffusers.schedulers.scheduling_ddim.DDIMScheduler
+    num_train_timesteps: 50
+    beta_start: 0.0001
+    beta_end: 0.02
+    beta_schedule: squaredcos_cap_v2
+    clip_sample: True
+    set_alpha_to_one: True
+    steps_offset: 0
+    prediction_type: sample
+
+
+  num_inference_steps: 10
+
+  obs_as_global_cond: true
+  shape_meta: ${shape_meta}
+
+  use_fourier_basis: false
+  pointnet_type: ${pc_encoder}
+
+  point_downsample: false
+  pc_encoder_sharing: shared
+
+  se3_augmentation_cfg:
+    use_aug: true
+
+    rotation: false
+    rotation_angle: [10, 10, 10]
+
+    translation: true
+    translation_scale: 0.01
+
+    jitter: true
+    jitter_scale: 0.01
+    # note: this is after normalization in the range of ~[-1, 1]
+
+  pointcloud_encoder_cfg:
+    # in_channels: 4
+    out_channels: 256
+    use_layernorm: true
+    final_norm: layernorm # layernorm, none
+    normal_channel: false
+    num_points: 4096
+    fourier_L: 10
+    seg_bias: 3.0
+
+ema:
+  _target_: diffusion_policy_3d.model.diffusion.ema_model.EMAModel
+  update_after_step: 0
+  inv_gamma: 1.0
+  power: 0.75
+  min_value: 0.0
+  max_value: 0.9999
+
+dataloader:
+  # batch_size: 120
+  batch_size: 64
+  num_workers: 8
+  shuffle: True
+  pin_memory: True
+  persistent_workers: False
+
+val_dataloader:
+  # batch_size: 120
+  batch_size: 64
+  num_workers: 8
+  shuffle: False
+  pin_memory: True
+  persistent_workers: False
+
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 1.0e-4
+  betas: [0.95, 0.999]
+  eps: 1.0e-8
+  weight_decay: 1.0e-6
+
+training:
+  device: "cuda:0"
+  seed: 42
+  debug: False
+  resume: True
+  lr_scheduler: cosine
+  lr_warmup_steps: 500
+  num_epochs: 301
+  gradient_accumulate_every: 1
+  use_ema: True
+  rollout_every: 400
+  checkpoint_every: 100
+  val_every: 100
+  sample_every: 5
+  max_train_steps: null
+  max_val_steps: null
+  tqdm_interval_sec: 1.0
+  save_video: True
+
+logging:
+  group: ${exp_name}
+  id: null
+  mode: disabled  # DexMulti release: fork default was online (paper runs used online)
+  name: ${training.seed}
+  project: idp3
+  resume: true
+  tags:
+  - train_diffusion_unet_hybrid
+  - dexdeform
+
+checkpoint:
+  save_ckpt: True # DexMulti release: fork default False; paper runs set True
+  topk:
+    monitor_key: test_mean_score
+    mode: max
+    k: 0
+    format_str: 'epoch={epoch:04d}-test_mean_score={test_mean_score:.3f}.ckpt'
+  save_last_ckpt: True # this only saves when save_ckpt is True
+  save_last_snapshot: False
+
+multi_run:
+  run_dir: outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}
+  wandb_name_base: ${now:%Y.%m.%d-%H.%M.%S}_${name}_${task_name}
+
+hydra:
+  job:
+    override_dirname: ${name}
+  run:
+    dir: outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}
+  sweep:
+    dir: outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}
+    subdir: ${hydra.job.num}
